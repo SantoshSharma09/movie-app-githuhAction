@@ -13,7 +13,7 @@ const Page = ({ blogs = [] }) => {
   return (
     <>
       <Head>
-        <title>Blogs Pages</title>
+        <title>Blogs Page</title>
         <meta titile="description" content="blogs,react.js,typescript"></meta>
       </Head>
       <main>
