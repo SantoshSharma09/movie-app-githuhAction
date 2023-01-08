@@ -1,11 +1,3 @@
-// import React from "react";
-
-// const Page = () => {
-//   return <div>Movie id in Url</div>;
-// };
-
-// export default Page;
-
 import Image from "next/image";
 import { useRouter } from "next/router";
 import React from "react";
@@ -18,12 +10,12 @@ const Page1 = ({ movie }) => {
       <button onClick={() => router.back()}>
         <h1>Go Back</h1>
       </button>
-      {/* <h1>Page:{router.query.id}</h1> */}
+
       <h3>{movie.Title}</h3>
       <div style={{ display: "flex" }}>
         {movie.Images.map((imge) => {
           return (
-            <div>
+            <div key={imge.id}>
               <Image src={imge} alt={"movie-image"} width="300" height="200" />
             </div>
           );

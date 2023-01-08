@@ -1,13 +1,12 @@
 import Head from "next/head";
 import React from "react";
-import Link from "next/link";
+
 import { useRouter } from "next/router";
 
 const Page = ({ blogs = [] }) => {
   const router = useRouter();
 
   const handleClick = (id) => {
-    // alert("visting page /", id);
     router.push(`/${id}`);
   };
 
@@ -16,7 +15,6 @@ const Page = ({ blogs = [] }) => {
       <Head>
         <title>Blogs Page</title>
         <meta titile="description" content="blogs,react.js,typescript"></meta>
-        <link ref="icon" href="/favicon.ico" />
       </Head>
       <main>
         {blogs.map((blog) => {

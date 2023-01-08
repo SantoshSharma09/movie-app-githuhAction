@@ -25,8 +25,7 @@ const Page = ({ movies = [] }) => {
       Images,
     };
     let res = await fetch(`http://localhost:3001/watchlists`, {
-      //this act the api i.e., local api
-      method: "POST", //this place the element in the body we use put
+      method: "POST",
       body: JSON.stringify(insta_obj),
       headers: {
         "Content-Type": "application/json",
@@ -38,7 +37,6 @@ const Page = ({ movies = [] }) => {
   };
 
   const handlDetails = (id) => {
-    // alert("visting page /", id);
     router.push(`/movies/${id}`);
   };
 
@@ -47,7 +45,6 @@ const Page = ({ movies = [] }) => {
       <Head>
         <title>Movies Page</title>
         <meta titile="description" content="blogs,react.js,typescript"></meta>
-        <link ref="icon" href="/favicon.ico" />
       </Head>
       <main>
         <h2>Total Watchlist : {count.length}</h2>

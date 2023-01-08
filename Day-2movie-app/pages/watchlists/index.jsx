@@ -19,7 +19,6 @@ const Page = ({ watchlists = [] }) => {
   }, []);
 
   const handleClick = async (id) => {
-    // window.location.reload(true);
     let res = await fetch(`http://localhost:3001/watchlists/${id}`, {
       method: "DELETE",
       headers: {
@@ -35,7 +34,6 @@ const Page = ({ watchlists = [] }) => {
       <Head>
         <title>Watchlist Page</title>
         <meta titile="description" content="blogs,react.js,typescript"></meta>
-        <link ref="icon" href="/favicon.ico" />
       </Head>
       <main>
         <h1>Watchlist Items : {dat.length}</h1>
